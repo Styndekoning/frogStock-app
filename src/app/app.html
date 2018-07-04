@@ -1,1 +1,21 @@
-<ion-nav [root]="rootPage">Hello World!</ion-nav>
+<ion-menu [content]="hamburgerContent" [persistent]="true">
+	<ion-header>
+		<ion-toolbar color="primary">
+			<ion-title>Menu</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+	<ion-content>
+		<ion-list>
+			<button ion-item icon left name="homeBtn" (click)="toHome(Home)">
+				<ion-icon name="home"></ion-icon>
+				Home
+			</button>
+			<button ion-item icon left name="settingsBtn" (click)="toSettings(Settings)">
+				<ion-icon name="settings"></ion-icon>
+				Settings</button>
+		</ion-list>
+	</ion-content>
+</ion-menu>
+
+<ion-nav #hamburgerContent [root]="rootPage"></ion-nav>

@@ -1,3 +1,13 @@
 page-home {
+	$button-height: 12rem;
+	$button-radius: 15px;
 
+	ion-grid {
+		ion-col {
+			.button-full {
+				height: $button-height;
+				border-radius: $button-radius;
+			}
+		}
+	}
 }
