@@ -12,7 +12,6 @@
 			</ion-avatar>
 			<h2 text-wrap>{{bottle.name}}</h2>
 			<h3 text-wrap>{{bottle.owner}} <span item-end> {{bottle.currentAmount}}/{{bottle.milliLiters}}  mL</span></h3>
-			<!-- <h2 text-wrap></h2> -->
 			<ion-icon item-end name="arrow-down" *ngIf="!bottle.show"></ion-icon>
 			<ion-icon item-end name="arrow-up" *ngIf="bottle.show"></ion-icon>
 		</button>

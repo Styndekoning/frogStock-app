@@ -10,6 +10,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { NightsPage } from '../pages/nights/nights';
 import { StatsPage } from '../pages/stats/stats';
 import { StockPage } from '../pages/stock/stock';
+import { AddNightPage } from '../pages/add-night/add-night';
 
 @NgModule({
 	declarations: [
@@ -18,7 +19,8 @@ import { StockPage } from '../pages/stock/stock';
 		SettingsPage,
 		StockPage,
 		NightsPage,
-		StatsPage
+		StatsPage,
+		AddNightPage
 	],
 	imports: [
 		BrowserModule,
@@ -31,7 +33,8 @@ import { StockPage } from '../pages/stock/stock';
 		SettingsPage,
 		StockPage,
 		NightsPage,
-		StatsPage
+		StatsPage,
+		AddNightPage
 	],
 	providers: [
 		StatusBar,

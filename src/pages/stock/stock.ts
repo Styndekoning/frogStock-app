@@ -43,9 +43,7 @@ export class StockPage {
 	) { }
 
 	toggleDetail(bottle: Bottle) {
-		// if (bottle > 0) {
 		bottle.show = !bottle.show;
-		// }
 	}
 
 }
