@@ -25,7 +25,7 @@ export class StockPage {
 		{
 			"id": 1,
 			"name": "Vodka",
-			"owner": "Henk de Mooiboii",
+			"owner": "De Mooiboii",
 			"currentAmount": 700,
 			"milliLiters": 1000,
 			"brand": "Esbjaerg",

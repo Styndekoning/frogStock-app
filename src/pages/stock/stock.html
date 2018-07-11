@@ -8,27 +8,27 @@
 	<ion-list name="inventory" *ngFor="let bottle of stock">
 		<button ion-item name="analyse-building-button" detail-none (click)="toggleDetail(bottle)">
 			<ion-avatar item-start>
-				<img src="assets/imgs/logo.png">
+				<img src="assets/imgs/logos/bacardi.png">
 			</ion-avatar>
 			<h2 text-wrap>{{bottle.name}}</h2>
-			<h2 text-wrap>{{bottle.owner}}</h2>
-			<h2 text-wrap>{{bottle.currentAmount}}/{{bottle.milliLiters}}</h2>
+			<h3 text-wrap>{{bottle.owner}} <span item-end> {{bottle.currentAmount}}/{{bottle.milliLiters}}  mL</span></h3>
+			<!-- <h2 text-wrap></h2> -->
 			<ion-icon item-end name="arrow-down" *ngIf="!bottle.show"></ion-icon>
 			<ion-icon item-end name="arrow-up" *ngIf="bottle.show"></ion-icon>
 		</button>
 
 		<ion-item *ngIf="bottle.show">
-			<img name="brandLogo" src="assets/imgs/logo.png">
+			<img padding name="brandLogo" src="assets/imgs/bottles/cartaBlanca.png">
 
 			<ion-grid no-padding>
 				<ion-row>
-					<ion-col>
+					<ion-col col-5>
 						<h2 item-start>{{bottle.brand}}</h2>
 					</ion-col>
-					<ion-col>
+					<ion-col col-4>
 						<h2>${{bottle.price}}</h2>
 					</ion-col>
-					<ion-col>
+					<ion-col >
 						<h2 item-end>{{bottle.percentage}}%</h2>
 					</ion-col>
 				</ion-row>
