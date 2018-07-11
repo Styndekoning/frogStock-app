@@ -1,25 +1,51 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the StockPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { Bottle } from '../../models/bottle.model';
 
-@IonicPage()
 @Component({
-  selector: 'page-stock',
-  templateUrl: 'stock.html',
+	selector: 'page-stock',
+	templateUrl: 'stock.html',
 })
 export class StockPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+	private stock: Bottle[] = [
+		{
+			"id": 0,
+			"name": "Carta Blanca",
+			"owner": "Henk",
+			"currentAmount": 200,
+			"milliLiters": 1500,
+			"brand": "Barcardi",
+			"price": 18.50,
+			"percentage": 37.5,
+			"description": "Barcardi Carta Blanca is een aromatische witte rum(gewoon bezine dus)",
+			"show": false
+		},
+		{
+			"id": 1,
+			"name": "Vodka",
+			"owner": "Henk de Mooiboii",
+			"currentAmount": 700,
+			"milliLiters": 1000,
+			"brand": "Esbjaerg",
+			"price": 11.80,
+			"percentage": 40,
+			"description": "Bergse vodka",
+			"show": false
+		},
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad StockPage');
-  }
+	];
+
+	constructor(
+		public navCtrl: NavController,
+		public navParams: NavParams,
+	) { }
+
+	toggleDetail(bottle: Bottle) {
+		// if (bottle > 0) {
+		bottle.show = !bottle.show;
+		// }
+	}
 
 }
